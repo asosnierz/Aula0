@@ -6,9 +6,8 @@
 
 
 ############
-
-answer = input("Are you over 16?")
-if answer == "Yes":
-   print("You can take driving lessons to prepare for your driving test.")
-elif answer == "No":
-   print("You are too young to learn how to drive a car.")
+pergunta = input('Você que saber o Seu Ip do Wi-fi?: (S/N)')
+if pergunta == "s":
+    print('SIM')
+else:
+    print('nao')

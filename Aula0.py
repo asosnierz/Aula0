@@ -9,15 +9,16 @@
 import os
 
 ############
-def sim_nao():
-pergunta = input('Você que saber o Seu Ip do Wi-fi?: (S/N)')
-if pergunta == "s":
-    wifi = 'ifconfig wlan0'
-    print ('\033[0;30;41m'+'O IP DO SEU WI-FI É :'+'\033[0;0m')
-    os.system(wifi)
-    print('\033[0;30;41m'+'FIM DE DADOS'+'\033[0;0m')
-else:
-    print('\033[0;30;43m'+'FIM DE DADOS'+'\033[0;0m') 
-
-if __name__=='__main__':
-sim_nao()
+def main():
+    limpar = 'clear'
+    pergunta = input('Você que saber o Seu Ip do Wi-fi?: (S/N)')
+    print(pergunta)
+    if pergunta == "s" or "S":
+        os.system(limpar)
+        wifi = 'ifconfig wlan0'
+        print ('\033[0;30;43m'+'O IP DO SEU WI-FI É :'+'\033[0;0m')
+        os.system(wifi)
+        print('\033[0;30;43m'+'FIM DE DADOS'+'\033[0;0m')
+    else:
+        print('\033[0;30;41m'+'CANCELAMENTO COM SUCESSO!'+'\033[0;0m') 
+main()
